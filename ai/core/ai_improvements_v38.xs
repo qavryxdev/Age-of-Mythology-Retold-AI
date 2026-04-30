@@ -277,7 +277,8 @@ void detectHoarding()
    bool hoarding = false;
    string reason = "";
 
-   int activeBuildPlans = aiPlanGetIDsByType(cPlanBuild).size();
+   int[] buildPlans = aiPlanGetIDsByType(cPlanBuild);
+   int activeBuildPlans = buildPlans.size();
 
    if (food > 3000.0 && activeBuildPlans < 2)
    {
