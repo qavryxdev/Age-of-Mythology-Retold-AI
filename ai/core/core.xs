@@ -100,3 +100,7 @@ include "core/bo_system/bo_system_internal_handler.xs";
 
 // v1.1: Adaptivni system uceni - musi byt jako posledni (potrebuje vsechny globaly)
 include "core/adaptive_learning.xs";
+
+// v3.0: AI improvements - 10 systemovych vylepseni nad ramec adaptive_learning
+// Musi byt po adaptive_learning protoze ctie jeho globaly.
+include "core/ai_improvements.xs";
