@@ -129,3 +129,7 @@ include "core/ai_improvements_v35.xs";
 // counter-rush eco crisis, pharaoh rotation, tech queue resolver, batch garrison,
 // berserk swap, ceasefire boom, endgame race detection)
 include "core/ai_improvements_v36.xs";
+
+// v3.7: Seste kolo (#51-60: hero death, favor velocity, dock cleanup, island sequencing,
+// mythic counter, brittleness, spell placement, forward base, civ bonuses, raid scanner)
+include "core/ai_improvements_v37.xs";
