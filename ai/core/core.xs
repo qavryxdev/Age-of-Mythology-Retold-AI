@@ -120,3 +120,7 @@ include "core/ai_improvements_v33.xs";
 // v3.4: BUG FIX - AI uveznena na startovnim ostrove (force naval logic kdyz vsichni enemy
 // jsou na jinem area group)
 include "core/ai_improvements_v34.xs";
+
+// v3.5: Multi-hop island chain - BFS pres area group graph, intermediate expansion
+// pro archipelagos (land-water-land-water-land scenare)
+include "core/ai_improvements_v35.xs";
