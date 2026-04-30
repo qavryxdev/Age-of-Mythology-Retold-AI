@@ -133,3 +133,7 @@ include "core/ai_improvements_v36.xs";
 // v3.7: Seste kolo (#51-60: hero death, favor velocity, dock cleanup, island sequencing,
 // mythic counter, brittleness, spell placement, forward base, civ bonuses, raid scanner)
 include "core/ai_improvements_v37.xs";
+
+// v3.8: Sedme kolo META-LEVEL (#61-70: rule interference, throttling, endgame state machine,
+// hoarding, GP sequencing, tempo classifier, anti-cheese, ally coord, retreat, chat triggers)
+include "core/ai_improvements_v38.xs";
