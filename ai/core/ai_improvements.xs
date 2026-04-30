@@ -398,7 +398,7 @@ void selectBOVariant()
       if (d < minEnemyDist) { minEnemyDist = d; }
    }
 
-   bool isIslandMap = kbGetIsIslandMap();
+   bool isIslandMap = gMapInfo.mIsIslandMap;
 
    // Heuristika: blizko (<150 tile) + ne ostrov + agresivni personality = rush
    //             ostrov nebo daleko + defensivni = eco
