@@ -112,3 +112,7 @@ include "core/ai_improvements_v31.xs";
 // v3.2: Treti kolo (#21-30: anti-myth focus, resource overflow, wall breach, settlement reactivity,
 // auto-trade, fishing rebuild, titan strategy, relic competition, garrison, enemy god reactions)
 include "core/ai_improvements_v32.xs";
+
+// v3.3: Ctvrte kolo (#31-40: pop cap cascading, friendly fire awareness, build queue reprio,
+// eco-mil sliding, tech race, priest conversion, ranged kiting, choke detection, fortress, scout sacrifice)
+include "core/ai_improvements_v33.xs";
