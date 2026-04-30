@@ -104,3 +104,7 @@ include "core/adaptive_learning.xs";
 // v3.0: AI improvements - 10 systemovych vylepseni nad ramec adaptive_learning
 // Musi byt po adaptive_learning protoze ctie jeho globaly.
 include "core/ai_improvements.xs";
+
+// v3.1: Druhe kolo vylepseni (#11-20: wonder defense, target value, scout retreat,
+// naval threat, idle villager, GP target, caravan block, multi-front, perimeter, woodline)
+include "core/ai_improvements_v31.xs";
