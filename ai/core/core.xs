@@ -124,3 +124,8 @@ include "core/ai_improvements_v34.xs";
 // v3.5: Multi-hop island chain - BFS pres area group graph, intermediate expansion
 // pro archipelagos (land-water-land-water-land scenare)
 include "core/ai_improvements_v35.xs";
+
+// v3.6: Pate kolo (#41-50: hero promo, starvation recovery, repair priority,
+// counter-rush eco crisis, pharaoh rotation, tech queue resolver, batch garrison,
+// berserk swap, ceasefire boom, endgame race detection)
+include "core/ai_improvements_v36.xs";
