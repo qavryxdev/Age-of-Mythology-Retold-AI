@@ -108,3 +108,7 @@ include "core/ai_improvements.xs";
 // v3.1: Druhe kolo vylepseni (#11-20: wonder defense, target value, scout retreat,
 // naval threat, idle villager, GP target, caravan block, multi-front, perimeter, woodline)
 include "core/ai_improvements_v31.xs";
+
+// v3.2: Treti kolo (#21-30: anti-myth focus, resource overflow, wall breach, settlement reactivity,
+// auto-trade, fishing rebuild, titan strategy, relic competition, garrison, enemy god reactions)
+include "core/ai_improvements_v32.xs";
