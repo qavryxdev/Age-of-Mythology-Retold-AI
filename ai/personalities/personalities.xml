@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Personalities>
+    <Personality>Standard</Personality>
+    <Personality>Attacker</Personality>
+    <Personality>Defender</Personality>
+</Personalities>

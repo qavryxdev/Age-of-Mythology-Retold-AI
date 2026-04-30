@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<AI>
+    <script>chairon</script>
+    <nameID>STR_MP_AI_DEF</nameID>
+    <tooltipID>STR_MP_AI_DEF</tooltipID>
+	<chatset>Shared</chatset>
+    <playerNames>
+        <nameID culture="Greek">STR_CITY_GREEK_ATHENS</nameID>
+        <nameID culture="Greek">STR_CITY_GREEK_ITHACA</nameID>
+        <nameID culture="Greek">STR_CITY_GREEK_SPARTA</nameID>
+        <nameID culture="Greek">STR_CITY_GREEK_CORINTH</nameID>
+        <nameID culture="Greek">STR_CITY_GREEK_TROY</nameID>
+        <nameID culture="Greek">STR_CITY_GREEK_THASOS</nameID>
+        <nameID culture="Greek">STR_CITY_GREEK_ERETRIA</nameID>
+        <nameID culture="Greek">STR_CITY_GREEK_MEGARA</nameID>
+        <nameID culture="Greek">STR_CITY_GREEK_KNOSSOS</nameID>
+        <nameID culture="Greek">STR_CITY_GREEK_MYCENAE</nameID>
+        <nameID culture="Greek">STR_CITY_GREEK_RHODES</nameID>
+        
+        <nameID culture="Egyptian">STR_CITY_EGYPTIAN_MEMPHIS</nameID>
+        <nameID culture="Egyptian">STR_CITY_EGYPTIAN_LUXOR</nameID>
+        <nameID culture="Egyptian">STR_CITY_EGYPTIAN_KARNAK</nameID>
+        <nameID culture="Egyptian">STR_CITY_EGYPTIAN_HELIOPOLIS</nameID>
+        <nameID culture="Egyptian">STR_CITY_EGYPTIAN_ALEXANDRIA</nameID>
+        <nameID culture="Egyptian">STR_CITY_EGYPTIAN_THEBES</nameID>
+        <nameID culture="Egyptian">STR_CITY_EGYPTIAN_LYCOPOLIS</nameID>
+        <nameID culture="Egyptian">STR_CITY_EGYPTIAN_IMET</nameID>
+        <nameID culture="Egyptian">STR_CITY_EGYPTIAN_GEBTU</nameID>
+        <nameID culture="Egyptian">STR_CITY_EGYPTIAN_BUBASTIS</nameID>
+        <nameID culture="Egyptian">STR_CITY_EGYPTIAN_KOROSKO</nameID>
+        
+        <nameID culture="Norse">STR_CITY_NORSE_NIDAROS</nameID>
+        <nameID culture="Norse">STR_CITY_NORSE_UPPSALA</nameID>
+        <nameID culture="Norse">STR_CITY_NORSE_TORSHAVN</nameID>
+        <nameID culture="Norse">STR_CITY_NORSE_TONSBERG</nameID>
+        <nameID culture="Norse">STR_CITY_NORSE_VISBY</nameID>
+        <nameID culture="Norse">STR_CITY_NORSE_JOMSBORG</nameID>
+        <nameID culture="Norse">STR_CITY_NORSE_RIBE</nameID>
+        <nameID culture="Norse">STR_CITY_NORSE_SKARA</nameID>
+        <nameID culture="Norse">STR_CITY_NORSE_OLSO</nameID>
+        <nameID culture="Norse">STR_CITY_NORSE_HEDEBY</nameID>
+        <nameID culture="Norse">STR_CITY_NORSE_REYKJAVIK</nameID>
+        
+        <nameID culture="Atlantean">STR_CITY_ATLANTEAN_KASTOR</nameID>
+        <nameID culture="Atlantean">STR_CITY_ATLANTEAN_ARKANTOS</nameID>
+        <nameID culture="Atlantean">STR_CITY_ATLANTEAN_KRIOS</nameID>
+        <nameID culture="Atlantean">STR_CITY_ATLANTEAN_OSPHORU</nameID>
+        <nameID culture="Atlantean">STR_CITY_ATLANTEAN_IOLETA</nameID>
+        <nameID culture="Atlantean">STR_CITY_ATLANTEAN_SILENUS</nameID>
+        <nameID culture="Atlantean">STR_CITY_ATLANTEAN_PHORCYS</nameID>
+        <nameID culture="Atlantean">STR_CITY_ATLANTEAN_ARION</nameID>
+        <nameID culture="Atlantean">STR_CITY_ATLANTEAN_CHRYASOR</nameID>
+        <nameID culture="Atlantean">STR_CITY_ATLANTEAN_EUMELUS</nameID>
+        <nameID culture="Atlantean">STR_CITY_ATLANTEAN_AZAES</nameID>
+    </playerNames>
+</AI>

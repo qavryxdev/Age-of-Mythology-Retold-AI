@@ -1,0 +1,760 @@
+﻿<!-- Every sentence can also take a <Sound> node that defaults to the sound folder path.
+	 Emergency means the chat will always be displayed, Background means it has a 20% chance to be displayed.
+	 After a background chat is sent there is a delay between 180 and 270 seconds before that same chat can be sent.
+	 This delay is hardcoded to 180 seconds and then there is a random number between 0 and 50% of the delay that gets added to it
+	 If you want to override the delay use config AIChatDelay=your number -->
+<ChatSets>
+	<Chatset name="Shared"> <!-- Every AI uses the Shared chatset, we have no custom sets atm -->
+        <Tag name="ToAllyCompletedTownCenter" priority="Background">
+			<Sentence>
+				<String>A new city joins my empire.</String>
+				<StringID>STR_AI_CHAT_COMPLETE_TC_1</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Aha! Another city sings my praises.</String>
+				<StringID>STR_AI_CHAT_COMPLETE_TC_2</StringID>
+			</Sentence>
+			<Sentence>
+				<String>My territory grows without bounds!</String>
+				<StringID>STR_AI_CHAT_COMPLETE_TC_3</StringID>
+			</Sentence>
+			<Sentence>
+				<String>This belongs to me. Soon all will belong to me.</String>
+				<StringID>STR_AI_CHAT_COMPLETE_TC_4</StringID>
+			</Sentence>
+			<Sentence>
+				<String>My people need more space.</String>
+				<StringID>STR_AI_CHAT_COMPLETE_TC_5</StringID>
+			</Sentence>
+			<Sentence>
+				<String>We civilize the wilds.</String>
+				<StringID>STR_AI_CHAT_COMPLETE_TC_6</StringID>
+			</Sentence>
+			<Sentence>
+				<String>More Town Centers! More Town Centers!</String>
+				<StringID>STR_AI_CHAT_COMPLETE_TC_7</StringID>
+			</Sentence>
+			<Sentence>
+				<String>My empire expands.</String>
+				<StringID>STR_AI_CHAT_COMPLETE_TC_8</StringID>
+			</Sentence>
+			<Sentence>
+				<String>I will name all these towns after myself.</String>
+				<StringID>STR_AI_CHAT_COMPLETE_TC_9</StringID>
+			</Sentence>
+			<Sentence>
+				<String>This new city puts all others to shame.</String>
+				<StringID>STR_AI_CHAT_COMPLETE_TC_10</StringID>
+			</Sentence>
+		</Tag>
+		
+		<Tag name="ToEverybodyLostAllVillagers" priority="Background">
+			<Sentence>
+				<String>My villagers are dead and my armies have fallen. It is over.</String>
+				<StringID>STR_AI_CHAT_LOST_ALL_VILLAGERS_1</StringID>
+			</Sentence>
+			<Sentence>
+				<String>It seems my gatherers have deserted me. You win this time.</String>
+				<StringID>STR_AI_CHAT_LOST_ALL_VILLAGERS_2</StringID>
+			</Sentence>
+			<Sentence>
+				<String>I quit. You just can't get good help these days.</String>
+				<StringID>STR_AI_CHAT_LOST_ALL_VILLAGERS_3</StringID>
+			</Sentence>
+		</Tag>
+		
+		<Tag name="ToEnemyOutnumbered" priority="Background">
+			<Sentence>
+				<String>So many soldiers everywhere! Must flee to the hills!</String>
+				<StringID>STR_AI_CHAT_OUTNUMBERED_1</StringID>
+			</Sentence>
+			<Sentence>
+				<String>It seems I am outnumbered. I cannot win.</String>
+				<StringID>STR_AI_CHAT_OUTNUMBERED_2</StringID>
+			</Sentence>
+			<Sentence>
+				<String>I could stand alone against your superior numbers, but what point would that serve?</String>
+				<StringID>STR_AI_CHAT_OUTNUMBERED_3</StringID>
+			</Sentence>
+		</Tag>
+		
+		<Tag name="ToEnemyWhenGameStarts" priority="Emergency">
+			<Sentence>
+				<String>Anger me, and I will burn your cities and sow salt in the fields.</String>
+				<StringID>STR_AI_CHAT_START_OF_GAME_1</StringID>
+			</Sentence>
+			<Sentence>
+				<String>It is a pleasure to meet you on the field of battle. I hope you put up a good fight!</String>
+				<StringID>STR_AI_CHAT_START_OF_GAME_2</StringID>
+			</Sentence>
+			<Sentence>
+				<String>I hope you don't mind if I destroy each and every last one of your kind. Thanks.</String>
+				<StringID>STR_AI_CHAT_START_OF_GAME_3</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Good Luck! You're going to need it.</String>
+				<StringID>STR_AI_CHAT_START_OF_GAME_4</StringID>
+			</Sentence>
+			<Sentence>
+				<String>All of this land will soon be mine.</String>
+				<StringID>STR_AI_CHAT_START_OF_GAME_5</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Greetings. I will take all your resources to build new temples for my god.</String>
+				<StringID>STR_AI_CHAT_START_OF_GAME_6</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Just keep your armies in your own lands, and we will get along fine.</String>
+				<StringID>STR_AI_CHAT_START_OF_GAME_7</StringID>
+			</Sentence>
+			<Sentence>
+				<String>I look forward to conquering your lands in the name of my deity.</String>
+				<StringID>STR_AI_CHAT_START_OF_GAME_8</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Your presence offends me. Do not come near my cities.</String>
+				<StringID>STR_AI_CHAT_START_OF_GAME_9</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Hail and well met. Now prepare to be crushed.</String>
+				<StringID>STR_AI_CHAT_START_OF_GAME_10</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Greetings, mortal.</String>
+				<StringID>STR_AI_CHAT_START_OF_GAME_11</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Hail, stranger. If you keep to your lands, I might keep to mine.</String>
+				<StringID>STR_AI_CHAT_START_OF_GAME_12</StringID>
+			</Sentence>
+			<Sentence>
+				<String>This land is too small for all of us. I suggest you surrender now.</String>
+				<StringID>STR_AI_CHAT_START_OF_GAME_13</StringID>
+			</Sentence>
+			<Sentence>
+				<String>If I can just locate some food, wood, and gold, I will train a huge army to punish you.</String>
+				<StringID>STR_AI_CHAT_START_OF_GAME_14</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Some empires were destined to rise. Yours, however, will fall.</String>
+				<StringID>STR_AI_CHAT_START_OF_GAME_15</StringID>
+			</Sentence>
+			<Sentence>
+				<String>My people will be victorious.</String>
+				<StringID>STR_AI_CHAT_START_OF_GAME_16</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Who are you and what are you doing near my lands?</String>
+				<StringID>STR_AI_CHAT_START_OF_GAME_17</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Perhaps my people will build a monument to commemorate your impending defeat.</String>
+				<StringID>STR_AI_CHAT_START_OF_GAME_18</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Build many, many walls. You'll need them when I arrive.</String>
+				<StringID>STR_AI_CHAT_START_OF_GAME_19</StringID>
+			</Sentence>
+			<Sentence>
+				<String>If you resigned now, we could save so much time.</String>
+				<StringID>STR_AI_CHAT_START_OF_GAME_20</StringID>
+			</Sentence>
+			<Sentence>
+				<String>If it's a war you want, that is precisely what you will get.</String>
+				<StringID>STR_AI_CHAT_START_OF_GAME_21</StringID>
+			</Sentence>
+			<Sentence>
+				<String>To the last, I grapple with thee!</String>
+				<StringID>STR_AI_CHAT_START_OF_GAME_22</StringID>
+			</Sentence>
+			<Sentence>
+				<String>I shall pave my roads with the rubble of your shattered empire.</String>
+				<StringID>STR_AI_CHAT_START_OF_GAME_23</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Let's try and make this a clean fight.</String>
+				<StringID>STR_AI_CHAT_START_OF_GAME_24</StringID>
+			</Sentence>
+			<Sentence>
+				<String>May all your villagers be killed by wild animals.</String>
+				<StringID>STR_AI_CHAT_START_OF_GAME_25</StringID>
+			</Sentence>
+			<Sentence>
+				<String>My empire expands slowly, so you'll have to give me plenty of time before you attack.</String>
+				<StringID>STR_AI_CHAT_START_OF_GAME_26</StringID>
+			</Sentence>
+			<Sentence>
+				<String>I have heard of this god you worship, but I am not impressed.</String>
+				<StringID>STR_AI_CHAT_START_OF_GAME_27</StringID>
+			</Sentence>
+			<Sentence>
+				<String>There's not enough room in the cosmos for both our pantheons.</String>
+				<StringID>STR_AI_CHAT_START_OF_GAME_28</StringID>
+			</Sentence>
+			<Sentence>
+				<String>May the best commander win.</String>
+				<StringID>STR_AI_CHAT_START_OF_GAME_29</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Pray to your gods. You will be seeing them soon.</String>
+				<StringID>STR_AI_CHAT_START_OF_GAME_30</StringID>
+			</Sentence>
+			<Sentence>
+				<String>My God can beat up your God!</String>
+				<StringID>STR_AI_CHAT_START_OF_GAME_31</StringID>
+			</Sentence>
+		</Tag>
+		
+		<Tag name="ToEverybodyGenericGodPower" priority="Background">
+			<Sentence>
+				<String>The gods have given me great power.</String>
+				<StringID>STR_AI_CHAT_GENERIC_GOD_POWER_1</StringID>
+			</Sentence>
+			<Sentence>
+				<String>My gods have a gift for you! I hope it hurts.</String>
+				<StringID>STR_AI_CHAT_GENERIC_GOD_POWER_2</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Since I have pleased the gods, I have been granted this power.</String>
+				<StringID>STR_AI_CHAT_GENERIC_GOD_POWER_3</StringID>
+			</Sentence>
+		</Tag>
+		
+		<Tag name="ToEnemyOffensiveGodPower" priority="Emergency">
+			<Sentence>
+				<String>Flee, coward!</String>
+				<StringID>STR_AI_CHAT_OFFENSIVE_GOD_POWER_1</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Take that!</String>
+				<StringID>STR_AI_CHAT_OFFENSIVE_GOD_POWER_2</StringID>
+			</Sentence>
+			<Sentence>
+				<String>This is just a sample of the powers I possess.</String>
+				<StringID>STR_AI_CHAT_OFFENSIVE_GOD_POWER_3</StringID>
+			</Sentence>
+			<Sentence>
+				<String>My god can beat up your god!</String>
+				<StringID>STR_AI_CHAT_OFFENSIVE_GOD_POWER_4</StringID>
+			</Sentence>
+			<Sentence>
+				<String>It is almost a waste of my power.</String>
+				<StringID>STR_AI_CHAT_OFFENSIVE_GOD_POWER_5</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Let that be a lesson to you.</String>
+				<StringID>STR_AI_CHAT_OFFENSIVE_GOD_POWER_6</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Behold!</String>
+				<StringID>STR_AI_CHAT_OFFENSIVE_GOD_POWER_7</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Taste the fury of my god!</String>
+				<StringID>STR_AI_CHAT_OFFENSIVE_GOD_POWER_8</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Did that hurt? It looked extremely painful.</String>
+				<StringID>STR_AI_CHAT_OFFENSIVE_GOD_POWER_9</StringID>
+			</Sentence>
+			<Sentence>
+				<String>I could have done even more damage if I had been trying.</String>
+				<StringID>STR_AI_CHAT_OFFENSIVE_GOD_POWER_10</StringID>
+			</Sentence>
+		</Tag>
+		
+		<Tag name="ToEverybodyEconomicGodPower" priority="Background">
+			<Sentence>
+				<String>The best offense is a good defense.</String>
+				<StringID>STR_AI_CHAT_ECONOMIC_GOD_POWER_1</StringID>
+			</Sentence>
+			<Sentence>
+				<String>My workers will appreciate this assistance.</String>
+				<StringID>STR_AI_CHAT_ECONOMIC_GOD_POWER_2</StringID>
+			</Sentence>
+			<Sentence>
+				<String>The gods have taken an interest in my economy.</String>
+				<StringID>STR_AI_CHAT_ECONOMIC_GOD_POWER_3</StringID>
+			</Sentence>
+			<Sentence>
+				<String>A strong economy will overcome a strong military.</String>
+				<StringID>STR_AI_CHAT_ECONOMIC_GOD_POWER_4</StringID>
+			</Sentence>
+			<Sentence>
+				<String>The gods have blessed my villagers.</String>
+				<StringID>STR_AI_CHAT_ECONOMIC_GOD_POWER_5</StringID>
+			</Sentence>
+			<Sentence>
+				<String>The gods favor my people.</String>
+				<StringID>STR_AI_CHAT_ECONOMIC_GOD_POWER_6</StringID>
+			</Sentence>
+			<Sentence>
+				<String>A bounty for my empire!</String>
+				<StringID>STR_AI_CHAT_ECONOMIC_GOD_POWER_7</StringID>
+			</Sentence>
+			<Sentence>
+				<String>See the power of our god?</String>
+				<StringID>STR_AI_CHAT_ECONOMIC_GOD_POWER_8</StringID>
+			</Sentence>
+			<Sentence>
+				<String>I could have chosen destruction, but I choose this instead.</String>
+				<StringID>STR_AI_CHAT_ECONOMIC_GOD_POWER_9</StringID>
+			</Sentence>
+			<Sentence>
+				<String>My cities hoard riches beyond imagination.</String>
+				<StringID>STR_AI_CHAT_ECONOMIC_GOD_POWER_10</StringID>
+			</Sentence>
+		</Tag>
+		
+		<Tag name="ToEnemyILostTownCenterButStillHaveOne" priority="Background">
+			<Sentence>
+				<String>The wolf bites at my heels.</String>
+				<StringID>STR_AI_CHAT_LOST_TOWN_CENTER_1</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Hey! I had a home in that town.</String>
+				<StringID>STR_AI_CHAT_LOST_TOWN_CENTER_2</StringID>
+			</Sentence>
+			<Sentence>
+				<String>It is difficult to fault your military prowess.</String>
+				<StringID>STR_AI_CHAT_LOST_TOWN_CENTER_3</StringID>
+			</Sentence>
+			<Sentence>
+				<String>I will soon come back to retake what is mine.</String>
+				<StringID>STR_AI_CHAT_LOST_TOWN_CENTER_4</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Curses! My economy will be in shambles.</String>
+				<StringID>STR_AI_CHAT_LOST_TOWN_CENTER_5</StringID>
+			</Sentence>
+			<Sentence>
+				<String>How dare they destroy my city!</String>
+				<StringID>STR_AI_CHAT_LOST_TOWN_CENTER_6</StringID>
+			</Sentence>
+			<Sentence>
+				<String>My empire crumbles. Have mercy.</String>
+				<StringID>STR_AI_CHAT_LOST_TOWN_CENTER_7</StringID>
+			</Sentence>
+			<Sentence>
+				<String>I didn't like that town anyway.</String>
+				<StringID>STR_AI_CHAT_LOST_TOWN_CENTER_8</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Don't worry, I have built all over the map.</String>
+				<StringID>STR_AI_CHAT_LOST_TOWN_CENTER_9</StringID>
+			</Sentence>
+			<Sentence>
+				<String>That town was too far from resources anyway.</String>
+				<StringID>STR_AI_CHAT_LOST_TOWN_CENTER_10</StringID>
+			</Sentence>
+		</Tag>
+		
+		<Tag name="ToEnemyILostMyLastTownCenter" priority="Background">
+			<Sentence>
+				<String>My empire has collapsed.</String>
+				<StringID>STR_AI_CHAT_LOST_FINAL_TOWN_CENTER_1</StringID>
+			</Sentence>
+			<Sentence>
+				<String>You have removed all of my cities from the map.</String>
+				<StringID>STR_AI_CHAT_LOST_FINAL_TOWN_CENTER_2</StringID>
+			</Sentence>
+			<Sentence>
+				<String>I suppose you will not stop until you have destroyed all of my empire.</String>
+				<StringID>STR_AI_CHAT_LOST_FINAL_TOWN_CENTER_3</StringID>
+			</Sentence>
+			<Sentence>
+				<String>My soldiers cannot eat grass and dirt. I must admit defeat.</String>
+				<StringID>STR_AI_CHAT_LOST_FINAL_TOWN_CENTER_4</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Without a settlement to tax, I won't be able to beat you. You win.</String>
+				<StringID>STR_AI_CHAT_LOST_FINAL_TOWN_CENTER_5</StringID>
+			</Sentence>
+			<Sentence>
+				<String>You have taken my last city. I resign.</String>
+				<StringID>STR_AI_CHAT_LOST_FINAL_TOWN_CENTER_6</StringID>
+			</Sentence>
+		</Tag>
+		
+		<Tag name="ToEnemyTheyLostTheirFinalTownCenter" priority="Background">
+			<Sentence>
+				<String>History will forget your god.</String>
+				<StringID>STR_AI_CHAT_PLAYER_LOST_FINAL_TOWN_CENTER_1</StringID>
+			</Sentence>
+			<Sentence>
+				<String>That had to hurt.</String>
+				<StringID>STR_AI_CHAT_PLAYER_LOST_FINAL_TOWN_CENTER_2</StringID>
+			</Sentence>
+			<Sentence>
+				<String>I hereby claim your lands for my people.</String>
+				<StringID>STR_AI_CHAT_PLAYER_LOST_FINAL_TOWN_CENTER_3</StringID>
+			</Sentence>
+			<Sentence>
+				<String>I love the smell of burned Town Centers in the morning.</String>
+				<StringID>STR_AI_CHAT_PLAYER_LOST_FINAL_TOWN_CENTER_3</StringID>
+			</Sentence>
+		</Tag>
+		
+		<Tag name="ToEnemyTheyAreBehindInAge" priority="Background">
+			<Sentence>
+				<String>Your civilization has yet to discover fire or the wheel.</String>
+				<StringID>STR_AI_CHAT_AHEAD_IN_AGE_1</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Someday I will rid the world of primitive cultures such as yours.</String>
+				<StringID>STR_AI_CHAT_AHEAD_IN_AGE_2</StringID>
+			</Sentence>
+			<Sentence>
+				<String>You cannot possibly expect to win with your limited technology.</String>
+				<StringID>STR_AI_CHAT_AHEAD_IN_AGE_3</StringID>
+			</Sentence>
+			<Sentence>
+				<String>You barbarians still fight with clubs and rocks.</String>
+				<StringID>STR_AI_CHAT_AHEAD_IN_AGE_4</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Only a civilization as advanced as ours deserves to survive.</String>
+				<StringID>STR_AI_CHAT_AHEAD_IN_AGE_5</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Another god for my collection.</String>
+				<StringID>STR_AI_CHAT_AHEAD_IN_AGE_6</StringID>
+			</Sentence>
+			<Sentence>
+				<String>The dawn of a new Age, and the dusk of your empire.</String>
+				<StringID>STR_AI_CHAT_AHEAD_IN_AGE_7</StringID>
+			</Sentence>
+		</Tag>
+		
+		<Tag name="ToEnemyIAmBehindInAge" priority="Background">
+			<Sentence>
+				<String>Your god has showered you with blessings.</String>
+				<StringID>STR_AI_CHAT_BEHIND_IN_AGE_1</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Perhaps you would share some of your technology with me?</String>
+				<StringID>STR_AI_CHAT_BEHIND_IN_AGE_2</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Even though you are more advanced, it will not save you from defeat.</String>
+				<StringID>STR_AI_CHAT_BEHIND_IN_AGE_3</StringID>
+			</Sentence>
+			<Sentence>
+				<String>How does your civilization have the resources to advance so quickly?</String>
+				<StringID>STR_AI_CHAT_BEHIND_IN_AGE_4</StringID>
+			</Sentence>
+			<Sentence>
+				<String>You may have technology, but we have numbers.</String>
+				<StringID>STR_AI_CHAT_BEHIND_IN_AGE_5</StringID>
+			</Sentence>
+			<Sentence>
+				<String>While you studied books, I studied the blades that will cut your empire to pieces.</String>
+				<StringID>STR_AI_CHAT_BEHIND_IN_AGE_6</StringID>
+			</Sentence>
+		</Tag>
+		
+		<Tag name="ToEnemyTheyLostTheirWonder" priority="Emergency">
+			<Sentence>
+				<String>The glory of your civilization is now a smoking ruin.</String>
+				<StringID>STR_AI_CHAT_PLAYER_LOST_WONDER_1</StringID>
+			</Sentence>
+			<Sentence>
+				<String>As you can see, it takes more than a big building to impress me.</String>
+				<StringID>STR_AI_CHAT_PLAYER_LOST_WONDER_2</StringID>
+			</Sentence>
+			<Sentence>
+				<String>The bigger they are, the harder they fall.</String>
+				<StringID>STR_AI_CHAT_PLAYER_LOST_WONDER_3</StringID>
+			</Sentence>
+		</Tag>
+		
+		<Tag name="ToEnemyTheyAreBuildingWalls" priority="Background">
+			<Sentence>
+				<String>Fine. Build walls. I will make siege weapons and come get you.</String>
+				<StringID>STR_AI_CHAT_PLAYER_BUILT_WALLS_1</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Walling yourself in? That won't help you.</String>
+				<StringID>STR_AI_CHAT_PLAYER_BUILT_WALLS_2</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Walls are to keep children in, not for keeping me out!</String>
+				<StringID>STR_AI_CHAT_PLAYER_BUILT_WALLS_3</StringID>
+			</Sentence>
+			<Sentence>
+				<String>You waste more resources on defenses?</String>
+				<StringID>STR_AI_CHAT_PLAYER_BUILT_WALLS_4</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Men fight with troops. Children fight with buildings.</String>
+				<StringID>STR_AI_CHAT_PLAYER_BUILT_WALLS_5</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Walls, walls, no bravery...</String>
+				<StringID>STR_AI_CHAT_PLAYER_BUILT_WALLS_6</StringID>
+			</Sentence>
+			<Sentence>
+				<String>With these walls, you've built your own mausoleum.</String>
+				<StringID>STR_AI_CHAT_PLAYER_BUILT_WALLS_7</StringID>
+			</Sentence>
+		</Tag>
+		
+		<Tag name="ToEnemyIStartAnAttack" priority="Background">
+			<Sentence>
+				<String>I hunger.</String>
+				<StringID>STR_AI_CHAT_BEGIN_ATTACK_1</StringID>
+			</Sentence>
+			<Sentence>
+				<String>It won't be long now. Soon you will see my banners in your lands.</String>
+				<StringID>STR_AI_CHAT_BEGIN_ATTACK_2</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Ready or not... here I come.</String>
+				<StringID>STR_AI_CHAT_BEGIN_ATTACK_3</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Lock your doors and windows. The storm approaches.</String>
+				<StringID>STR_AI_CHAT_BEGIN_ATTACK_4</StringID>
+			</Sentence>
+			<Sentence>
+				<String>There will be nothing left of your town but rocks and skeletons.</String>
+				<StringID>STR_AI_CHAT_BEGIN_ATTACK_5</StringID>
+			</Sentence>
+			<Sentence>
+				<String>You are in my way. You shall be removed.</String>
+				<StringID>STR_AI_CHAT_BEGIN_ATTACK_6</StringID>
+			</Sentence>
+			<Sentence>
+				<String>You are about to be punished for your crimes.</String>
+				<StringID>STR_AI_CHAT_BEGIN_ATTACK_7</StringID>
+			</Sentence>
+			<Sentence>
+				<String>My god decrees that I must destroy you.</String>
+				<StringID>STR_AI_CHAT_BEGIN_ATTACK_8</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Your soldiers are mighty, but they will die like any.</String>
+				<StringID>STR_AI_CHAT_BEGIN_ATTACK_9</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Charge! Leave no man standing.</String>
+				<StringID>STR_AI_CHAT_BEGIN_ATTACK_10</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Pray to your gods. You will be seeing them soon.</String>
+				<StringID>STR_AI_CHAT_BEGIN_ATTACK_11</StringID>
+			</Sentence>
+			<Sentence>
+				<String>You are a stain on this land and I shall rub you out.</String>
+				<StringID>STR_AI_CHAT_BEGIN_ATTACK_12</StringID>
+			</Sentence>
+			<Sentence>
+				<String>History will remember this as the day I defeated you in combat.</String>
+				<StringID>STR_AI_CHAT_BEGIN_ATTACK_13</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Garrison your villagers, or you are about to lose them all.</String>
+				<StringID>STR_AI_CHAT_BEGIN_ATTACK_14</StringID>
+			</Sentence>
+			<Sentence>
+				<String>I will attack you now, then perhaps use my God Powers after that.</String>
+				<StringID>STR_AI_CHAT_BEGIN_ATTACK_15</StringID>
+			</Sentence>
+			<Sentence>
+				<String>I toy with my prey.</String>
+				<StringID>STR_AI_CHAT_BEGIN_ATTACK_16</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Swords sharpened. Spears leveled. Prepare to attack!</String>
+				<StringID>STR_AI_CHAT_BEGIN_ATTACK_17</StringID>
+			</Sentence>
+			<Sentence>
+				<String>My men know if they don't crush you, I will crush them.</String>
+				<StringID>STR_AI_CHAT_BEGIN_ATTACK_18</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Flee while you are still able!</String>
+				<StringID>STR_AI_CHAT_BEGIN_ATTACK_19</StringID>
+			</Sentence>
+		</Tag>
+		
+		<Tag name="ToAllyIAmAttackingHere" priority="Background">
+			<Sentence>
+				<String>My troops fight here.</String>
+				<StringID>STR_AI_CHAT_ATTACKING_HERE_1</StringID>
+			</Sentence>
+			<Sentence>
+				<String>I am attacking here.</String>
+				<StringID>STR_AI_CHAT_ATTACKING_HERE_2</StringID>
+			</Sentence>
+			<Sentence>
+				<String>I am planning to engage the enemy here.</String>
+				<StringID>STR_AI_CHAT_ATTACKING_HERE_3</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Can you not hear the sounds? Smell the smoke? Come join in battle here!</String>
+				<StringID>STR_AI_CHAT_ATTACKING_HERE_4</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Send your troops to join in the fight at this location.</String>
+				<StringID>STR_AI_CHAT_ATTACKING_HERE_5</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Once more into the breach my friend.</String>
+				<StringID>STR_AI_CHAT_ATTACKING_HERE_6</StringID>
+			</Sentence>
+		</Tag>
+		
+		<Tag name="ToEnemyIRetreat" priority="Background">
+			<Sentence>
+				<String>Run away! Run away!</String>
+				<StringID>STR_AI_CHAT_RETREAT_1</StringID>
+			</Sentence>
+			<Sentence>
+				<String>I will return to fight another day.</String>
+				<StringID>STR_AI_CHAT_RETREAT_2</StringID>
+			</Sentence>
+			<Sentence>
+				<String>My victory over your empire will have to wait.</String>
+				<StringID>STR_AI_CHAT_RETREAT_3</StringID>
+			</Sentence>
+			<Sentence>
+				<String>You have pushed us back into the fringes of civilization.</String>
+				<StringID>STR_AI_CHAT_RETREAT_4</StringID>
+			</Sentence>
+			<Sentence>
+				<String>I will withdraw. We shall resume our battle later.</String>
+				<StringID>STR_AI_CHAT_RETREAT_5</StringID>
+			</Sentence>
+			<Sentence>
+				<String>My fools are fleeing!</String>
+				<StringID>STR_AI_CHAT_RETREAT_6</StringID>
+			</Sentence>
+		</Tag>
+		
+		<Tag name="ToAllyINeedHelp" priority="Background">
+			<Sentence>
+				<String>I am going to be crushed! Can't you do anything?</String>
+				<StringID>STR_AI_CHAT_NEED_HELP_1</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Can you help me out over here?</String>
+				<StringID>STR_AI_CHAT_NEED_HELP_2</StringID>
+			</Sentence>
+			<Sentence>
+				<String>I am having some trouble in this spot.</String>
+				<StringID>STR_AI_CHAT_NEED_HELP_3</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Help me here, or I will be forced to resign.</String>
+				<StringID>STR_AI_CHAT_NEED_HELP_4</StringID>
+			</Sentence>
+			<Sentence>
+				<String>They are getting the best of me at this location.</String>
+				<StringID>STR_AI_CHAT_NEED_HELP_5</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Can you come bail me out again?</String>
+				<StringID>STR_AI_CHAT_NEED_HELP_6</StringID>
+			</Sentence>
+			<Sentence>
+				<String>They're everywhere! Help me at once!</String>
+				<StringID>STR_AI_CHAT_NEED_HELP_7</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Can you bring your troops or invoke a god power here?</String>
+				<StringID>STR_AI_CHAT_NEED_HELP_8</StringID>
+			</Sentence>
+			<Sentence>
+				<String>I am losing the battle. Send aid here!</String>
+				<StringID>STR_AI_CHAT_NEED_HELP_9</StringID>
+			</Sentence>
+			<Sentence>
+				<String>We need more troops at this spot.</String>
+				<StringID>STR_AI_CHAT_NEED_HELP_10</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Can you give me a hand in my home base?</String>
+				<StringID>STR_AI_CHAT_NEED_HELP_11</StringID>
+			</Sentence>
+			<Sentence>
+				<String>If you don't help me out in my home base, I might not be there to help you later.</String>
+				<StringID>STR_AI_CHAT_NEED_HELP_12</StringID>
+			</Sentence>
+		</Tag>
+		
+		<Tag name="ToEnemyITookARelic" priority="Background">
+			<Sentence>
+				<String>Nice Relic! I'll take it.</String>
+				<StringID>STR_AI_CHAT_TOOK_RELIC_1</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Look Ma, I found a Relic!</String>
+				<StringID>STR_AI_CHAT_TOOK_RELIC_2</StringID>
+			</Sentence>
+			<Sentence>
+				<String>I shall present this Relic to the Temple of my god.</String>
+				<StringID>STR_AI_CHAT_TOOK_RELIC_3</StringID>
+			</Sentence>
+			<Sentence>
+				<String>I am glad I found this Relic before you did.</String>
+				<StringID>STR_AI_CHAT_TOOK_RELIC_4</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Another Relic to add to my collection.</String>
+				<StringID>STR_AI_CHAT_TOOK_RELIC_5</StringID>
+			</Sentence>
+			<Sentence>
+				<String>It was foretold that I would uncover this Relic.</String>
+				<StringID>STR_AI_CHAT_TOOK_RELIC_6</StringID>
+			</Sentence>
+			<Sentence>
+				<String>If you want this Relic, you will have to pry it from my Temple.</String>
+				<StringID>STR_AI_CHAT_TOOK_RELIC_7</StringID>
+			</Sentence>
+			<Sentence>
+				<String>This Relic belongs in a Temple!</String>
+				<StringID>STR_AI_CHAT_TOOK_RELIC_8</StringID>
+			</Sentence>
+			<Sentence>
+				<String>The last Relic I needed, now my empire is inevitable.</String>
+				<StringID>STR_AI_CHAT_TOOK_RELIC_9</StringID>
+			</Sentence>
+		</Tag>
+		
+		<Tag name="ToAllyITookARelic" priority="Background">
+			<Sentence>
+				<String>Yo! I am taking this Relic.</String>
+				<StringID>STR_AI_CHAT_TOOK_RELIC_ALLY_1</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Sweet, this Relic is mine.</String>
+				<StringID>STR_AI_CHAT_TOOK_RELIC_ALLY_2</StringID>
+			</Sentence>
+			<Sentence>
+				<String>I'm calling dibs on this Relic.</String>
+				<StringID>STR_AI_CHAT_TOOK_RELIC_ALLY_3</StringID>
+			</Sentence>
+		</Tag>
+		
+		<Tag name="ToPlayerAskToResign" priority="Emergency">
+			<Sentence>
+				<String>Perhaps you would allow me to leave with some dignity?</String>
+				<StringID>STR_AI_CHAT_ASK_RESIGN_1</StringID>
+			</Sentence>
+			<Sentence>
+				<String>May I offer my surrender?</String>
+				<StringID>STR_AI_CHAT_ASK_RESIGN_2</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Can we please stop this war before more lives are lost?</String>
+				<StringID>STR_AI_CHAT_ASK_RESIGN_3</StringID>
+			</Sentence>
+			<Sentence>
+				<String>Will you have mercy upon my humbled realm?</String>
+				<StringID>STR_AI_CHAT_ASK_RESIGN_4</StringID>
+			</Sentence>
+		</Tag>
+		
+    </Chatset>
+</ChatSets>
