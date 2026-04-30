@@ -116,3 +116,7 @@ include "core/ai_improvements_v32.xs";
 // v3.3: Ctvrte kolo (#31-40: pop cap cascading, friendly fire awareness, build queue reprio,
 // eco-mil sliding, tech race, priest conversion, ranged kiting, choke detection, fortress, scout sacrifice)
 include "core/ai_improvements_v33.xs";
+
+// v3.4: BUG FIX - AI uveznena na startovnim ostrove (force naval logic kdyz vsichni enemy
+// jsou na jinem area group)
+include "core/ai_improvements_v34.xs";
